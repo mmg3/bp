@@ -4,6 +4,6 @@ Este repositorio contiene el documento entregable del ejercicio practico de arqu
 
 ## Archivo principal
 
-- `solucion_bp_banca_internet_BP.pdf`: documento final con la propuesta arquitectonica, diagramas C4, diagramas adicionales, justificaciones, seguridad, normativa, HA/DR, monitoreo y costos.
-- `solucion_bp_banca_internet.html`: fuente HTML usada para generar el PDF.
+- `solucion_BP_Guido_Guerrero.pdf`: documento con la propuesta arquitectonica, diagramas C4, diagramas adicionales, justificaciones, seguridad, normativa, HA/DR, monitoreo y costos.
+
 
