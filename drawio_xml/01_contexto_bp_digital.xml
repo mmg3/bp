@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="01_contexto_bp_digital" name="C4 Nivel 1 - Contexto BP Digital">
+    <mxGraphModel dx="2020" dy="1113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#0B6B75;align=left;" value="C4 Nivel 1 - Contexto BP Digital" vertex="1">
+          <mxGeometry height="50" width="1000" x="40" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Cliente BP&lt;br&gt;Consulta movimientos, paga y transfiere" vertex="1">
+          <mxGeometry height="95" width="310" x="20" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="operador" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Operador BP&lt;br&gt;Soporte y monitoreo operativo" vertex="1">
+          <mxGeometry height="90" width="310" x="20" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="bp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#e9f6f2;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Sistema BP Digital&lt;br&gt;Banca por internet y movil" vertex="1">
+          <mxGeometry height="135" width="360" x="520" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="idp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Proveedor OAuth2/OIDC&lt;br&gt;Autenticacion, MFA y tokens" vertex="1">
+          <mxGeometry height="95" width="360" x="1320" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Core Bancario&lt;br&gt;Clientes, productos, saldos y movimientos" vertex="1">
+          <mxGeometry height="95" width="360" x="1320" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="detalle" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Sistema Complementario Cliente&lt;br&gt;Datos extendidos y documentos" vertex="1">
+          <mxGeometry height="95" width="360" x="1320" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="biometria" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Proveedor Biometrico/KYC&lt;br&gt;Reconocimiento facial y prueba de vida" vertex="1">
+          <mxGeometry height="95" width="360" x="1320" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="red" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Redes externas&lt;br&gt;ACH/SPI, pagos y bancos corresponsales" vertex="1">
+          <mxGeometry height="95" width="360" x="1320" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="notif" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Proveedores de notificacion&lt;br&gt;SMS, email y push" vertex="1">
+          <mxGeometry height="95" width="360" x="1320" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="siem" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="SIEM/SOC&lt;br&gt;Seguridad, alertas y auditoria" vertex="1">
+          <mxGeometry height="90" width="360" x="1320" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="fraude" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Equipo Riesgo/Fraude&lt;br&gt;Analiza alertas y casos" vertex="1">
+          <mxGeometry height="90" width="360" x="780" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="cliente" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="bp" value="HTTPS web/movil">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="operador" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="bp" value="Consola operativa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="bp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="idp" value="OAuth2/OIDC, MFA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="bp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="core" value="Consulta y transaccion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="bp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="detalle" value="Datos detallados">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="bp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="biometria" value="KYC onboarding movil">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="bp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="red" value="Transferencias y pagos externos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="bp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="notif" value="Eventos de movimiento">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="bp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="siem" value="Logs, metricas, auditoria">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="fraude" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="siem" value="Casos y alertas">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

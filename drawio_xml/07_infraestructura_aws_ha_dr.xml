@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="07_infraestructura_aws_ha_dr" name="Infraestructura AWS, HA y DR">
+    <mxGraphModel dx="1768" dy="974" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#0B6B75;align=left;" value="Infraestructura AWS, HA y DR" vertex="1">
+          <mxGeometry height="50" width="1000" x="40" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="internet" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Internet / Clientes" vertex="1">
+          <mxGeometry height="80" width="260" x="70" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="dns" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Route 53&lt;br&gt;DNS y failover" vertex="1">
+          <mxGeometry height="80" width="260" x="420" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="cf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="CloudFront + WAF + Shield" vertex="1">
+          <mxGeometry height="80" width="300" x="770" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="alb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="ALB / API Gateway" vertex="1">
+          <mxGeometry height="80" width="280" x="1160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="compute" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#e9f6f2;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="EKS/ECS Fargate&lt;br&gt;Servicios BP Digital Multi-AZ" vertex="1">
+          <mxGeometry height="90" width="280" x="1160" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="rds" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Aurora PostgreSQL Multi-AZ" vertex="1">
+          <mxGeometry height="80" width="300" x="1510" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="ElastiCache Redis Multi-AZ" vertex="1">
+          <mxGeometry height="80" width="300" x="1510" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="mq" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="SNS/SQS/MSK&lt;br&gt;mensajeria" vertex="1">
+          <mxGeometry height="80" width="300" x="1510" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="S3 Object Lock&lt;br&gt;auditoria y backups" vertex="1">
+          <mxGeometry height="80" width="300" x="1510" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="obs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="CloudWatch, X-Ray,&lt;br&gt;OpenSearch, GuardDuty" vertex="1">
+          <mxGeometry height="90" width="280" x="1160" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="onprem" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Red privada BP&lt;br&gt;Core y legados" vertex="1">
+          <mxGeometry height="90" width="300" x="790" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="ext" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#fff4e6;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Proveedores externos&lt;br&gt;KYC, ACH/SPI, notificaciones" vertex="1">
+          <mxGeometry height="90" width="300" x="420" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="dr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#fff4e6;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Region secundaria DR&lt;br&gt;servicios minimos + replicas" vertex="1">
+          <mxGeometry height="90" width="340" x="1160" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="internet" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="dns" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="dns" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="cf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="cf" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="alb" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="alb" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="compute" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="compute" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="rds" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="compute" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="redis" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="compute" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="mq" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="mq" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="s3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="compute" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="obs" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="compute" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="onprem" value="VPN/Direct Connect mTLS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="compute" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="ext" value="HTTPS/mTLS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" edge="1" parent="1" source="rds" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="dr" value="replica/backups">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" edge="1" parent="1" source="s3" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="dr" value="replica">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" edge="1" parent="1" source="dns" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="dr" value="failover">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

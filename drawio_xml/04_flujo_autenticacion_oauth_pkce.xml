@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="04_flujo_autenticacion_oauth_pkce" name="Flujo de Autenticacion OAuth 2.0/OIDC con PKCE">
+    <mxGraphModel dx="1664" dy="916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#0B6B75;align=left;" value="Flujo de Autenticacion OAuth 2.0/OIDC con PKCE" vertex="1">
+          <mxGeometry height="50" width="1000" x="40" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Cliente" vertex="1">
+          <mxGeometry height="80" width="220" x="50" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="SPA/App Movil" vertex="1">
+          <mxGeometry height="80" width="240" x="340" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="idp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="IdP OAuth2/OIDC" vertex="1">
+          <mxGeometry height="80" width="260" x="690" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="API Gateway/BFF" vertex="1">
+          <mxGeometry height="80" width="260" x="1030" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="svc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicios BP" vertex="1">
+          <mxGeometry height="80" width="240" x="1370" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="mfa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#fff4e6;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Login + MFA adaptativo" vertex="1">
+          <mxGeometry height="80" width="260" x="510" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="pkce" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Authorization Code + PKCE&lt;br&gt;code_challenge / verifier" vertex="1">
+          <mxGeometry height="90" width="240" x="690" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="tokens" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="ID token + access token&lt;br&gt;refresh token rotado" vertex="1">
+          <mxGeometry height="90" width="260" x="760" y="759" as="geometry" />
+        </mxCell>
+        <mxCell id="valid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Validacion JWT&lt;br&gt;issuer, audience, scopes" vertex="1">
+          <mxGeometry height="90" width="260" x="1250" y="759" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="cliente" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="app" value="Inicia sesion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="app" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="pkce" value="Genera PKCE">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="pkce" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="idp" value="Solicitud autorizacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="idp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="mfa" value="Autentica">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="mfa" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="app" value="Authorization code">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="app" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="tokens" value="Intercambia code + verifier">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="tokens" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="api" value="Bearer token">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="api" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="valid" value="Valida token">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="svc" value="Claims + scopes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1-n0hERA5Xg1wxt14z6x-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fontSize=12;spacing=10;fillColor=#F7F4EE;strokeColor=#9F6B00;fontColor=#17202A;strokeWidth=1;" value="PKCE evita que un authorization code interceptado pueda usarse sin el code_verifier original. El API Gateway/BFF no autentica al usuario; valida el token emitido por el IdP y aplica autorizacion por claims y scopes." vertex="1">
+          <mxGeometry height="70" width="1410" x="195" y="950" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

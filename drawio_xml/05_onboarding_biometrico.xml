@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="05_onboarding_biometrico" name="Onboarding Movil con Reconocimiento Facial">
+    <mxGraphModel dx="1768" dy="974" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#0B6B75;align=left;" value="Onboarding Movil con Reconocimiento Facial" vertex="1">
+          <mxGeometry height="50" width="1000" x="40" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Nuevo cliente" vertex="1">
+          <mxGeometry height="80" width="230" x="40" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="App Movil Flutter&lt;br&gt;camara y captura" vertex="1">
+          <mxGeometry height="90" width="260" x="370" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="onb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Onboarding Service" vertex="1">
+          <mxGeometry height="80" width="260" x="730" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="kyc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#fff4e6;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Proveedor KYC/Biometria&lt;br&gt;documento, rostro, liveness" vertex="1">
+          <mxGeometry height="90" width="320" x="1060" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="risk" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#fff4e6;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Motor Antifraude&lt;br&gt;listas, dispositivo, IP" vertex="1">
+          <mxGeometry height="90" width="320" x="1060" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Core Bancario&lt;br&gt;alta/actualizacion cliente" vertex="1">
+          <mxGeometry height="90" width="300" x="1450" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="idp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="IdP OIDC&lt;br&gt;usuario, MFA, dispositivo" vertex="1">
+          <mxGeometry height="90" width="300" x="1450" y="393" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Auditoria&lt;br&gt;evento inmutable" vertex="1">
+          <mxGeometry height="90" width="300" x="1450" y="703" as="geometry" />
+        </mxCell>
+        <mxCell id="login" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#e9f6f2;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Primer ingreso&lt;br&gt;clave + MFA o biometria local" vertex="1">
+          <mxGeometry height="90" width="300" x="710" y="703" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="cliente" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="mobile" value="Captura documento y rostro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="mobile" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="onb" value="Solicitud KYC cifrada">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="onb" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="kyc" value="Validacion facial">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="onb" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="risk" value="Scoring riesgo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="onb" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="core" value="Alta/actualiza cliente">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="onb" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="idp" value="Enrola credenciales">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="onb" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="audit" value="Registra evidencia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="onb" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="login" value="Aprobado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

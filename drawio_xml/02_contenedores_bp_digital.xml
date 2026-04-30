@@ -1,0 +1,142 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="02_contenedores_bp_digital" name="C4 Nivel 2 - Contenedores">
+    <mxGraphModel dx="2357" dy="1298" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#0B6B75;align=left;" value="C4 Nivel 2 - Contenedores" vertex="1">
+          <mxGeometry height="50" width="1000" x="40" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="spa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="SPA Web&lt;br&gt;React, OIDC, HTTPS" vertex="1">
+          <mxGeometry height="80" width="245" x="70" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="App Movil&lt;br&gt;Flutter, biometria local" vertex="1">
+          <mxGeometry height="80" width="245" x="70" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="CloudFront + WAF&lt;br&gt;TLS, DDoS, OWASP" vertex="1">
+          <mxGeometry height="90" width="260" x="390" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="API Gateway&lt;br&gt;JWT, rate limit, throttling" vertex="1">
+          <mxGeometry height="90" width="260" x="720" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="bff" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="BFF Web/Movil&lt;br&gt;Agregacion por canal" vertex="1">
+          <mxGeometry height="90" width="260" x="1050" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="authz" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Sesion y Autorizacion&lt;br&gt;Scopes, roles, step-up" vertex="1">
+          <mxGeometry height="80" width="300" x="1380" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="customer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio Cliente&lt;br&gt;Perfil y datos basicos" vertex="1">
+          <mxGeometry height="80" width="300" x="1380" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="movement" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio Movimientos&lt;br&gt;Historico y filtros" vertex="1">
+          <mxGeometry height="80" width="300" x="1380" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="transfer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio Transferencias&lt;br&gt;Propias e interbancarias" vertex="1">
+          <mxGeometry height="80" width="300" x="1380" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="payment" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio Pagos&lt;br&gt;Servicios y terceros" vertex="1">
+          <mxGeometry height="80" width="300" x="1380" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="onboarding" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio Onboarding/KYC&lt;br&gt;Alta movil" vertex="1">
+          <mxGeometry height="80" width="300" x="1380" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="bus" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Event Bus SNS/SQS&lt;br&gt;Eventos, retries, DLQ" vertex="1">
+          <mxGeometry height="90" width="260" x="1050" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio Auditoria&lt;br&gt;Eventos append-only" vertex="1">
+          <mxGeometry height="90" width="260" x="720" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="notif" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio Notificaciones&lt;br&gt;Email, SMS, push" vertex="1">
+          <mxGeometry height="90" width="260" x="720" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="cache" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Redis/ElastiCache&lt;br&gt;Clientes frecuentes" vertex="1">
+          <mxGeometry height="80" width="245" x="70" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Aurora PostgreSQL&lt;br&gt;Preferencias y datos digitales" vertex="1">
+          <mxGeometry height="80" width="245" x="70" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="auditdb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Base Auditoria&lt;br&gt;Ledger/S3 Object Lock" vertex="1">
+          <mxGeometry height="80" width="245" x="70" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="adapters" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Adaptadores Anticorrupcion&lt;br&gt;Core, detalle, ACH/pagos" vertex="1">
+          <mxGeometry height="90" width="300" x="1860" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="external" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#fff4e6;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Core, sistema detalle,&lt;br&gt;KYC, ACH/SPI y proveedores" vertex="1">
+          <mxGeometry height="90" width="300" x="1370" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="spa" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="cdn" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="mobile" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="cdn" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="cdn" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="gw" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="gw" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="bff" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="bff" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="authz" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="bff" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="customer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="bff" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="movement" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="bff" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="transfer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="bff" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="bff" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="onboarding" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="customer" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="cache" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" edge="1" parent="1" source="customer" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="db" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" edge="1" parent="1" source="movement" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="cache" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" edge="1" parent="1" source="transfer" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="bus" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" edge="1" parent="1" source="payment" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="bus" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" edge="1" parent="1" source="bus" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="audit" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" edge="1" parent="1" source="bus" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="notif" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" edge="1" parent="1" source="audit" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="auditdb" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" edge="1" parent="1" source="customer" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="adapters" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" edge="1" parent="1" source="movement" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="adapters" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" edge="1" parent="1" source="transfer" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="adapters" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge22" edge="1" parent="1" source="payment" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="adapters" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge23" edge="1" parent="1" source="onboarding" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="external" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge24" edge="1" parent="1" source="adapters" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="external" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="06_auditoria_outbox_cache" name="Auditoria, Outbox y Cache-aside">
+    <mxGraphModel dx="1571" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#0B6B75;align=left;" value="Auditoria, Outbox y Cache-aside" vertex="1">
+          <mxGeometry height="50" width="1000" x="40" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="svc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Servicio de negocio&lt;br&gt;transferencia, pago o consulta" vertex="1">
+          <mxGeometry height="90" width="320" x="80" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Aurora PostgreSQL&lt;br&gt;estado transaccional" vertex="1">
+          <mxGeometry height="90" width="300" x="520" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="outbox" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Tabla Outbox&lt;br&gt;evento pendiente" vertex="1">
+          <mxGeometry height="90" width="300" x="520" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="pub" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Outbox Publisher" vertex="1">
+          <mxGeometry height="80" width="260" x="940" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="bus" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="SNS/SQS Event Bus" vertex="1">
+          <mxGeometry height="80" width="280" x="1300" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Audit Service" vertex="1">
+          <mxGeometry height="80" width="280" x="1300" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="ledger" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="QLDB / S3 Object Lock&lt;br&gt;append-only" vertex="1">
+          <mxGeometry height="80" width="280" x="1300" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="notif" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Notification Service" vertex="1">
+          <mxGeometry height="80" width="280" x="1300" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#f7f4ee;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Redis Cache&lt;br&gt;clientes frecuentes" vertex="1">
+          <mxGeometry height="90" width="300" x="520" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=15;spacing=8;fillColor=#eef7f8;strokeColor=#0b6b75;fontColor=#17202A;strokeWidth=2;" value="Core Bancario&lt;br&gt;fuente de verdad" vertex="1">
+          <mxGeometry height="90" width="260" x="940" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="svc" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="db" value="1. confirma transaccion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="svc" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="outbox" value="2. guarda evento">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="outbox" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="pub" value="3. publica confiablemente">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="pub" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="bus" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="bus" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="audit" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="audit" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="ledger" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="bus" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="notif" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="svc" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="redis" value="lectura cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="redis" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="core" value="cache miss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="core" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#52616F;fontSize=12;" target="svc" value="respuesta oficial">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
